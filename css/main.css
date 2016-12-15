@@ -1599,12 +1599,16 @@ pre .javascript .function {
   max-width: 96px;
   height: auto;
   border: 2px solid #333;
+  border-radius: 50%;
+  border: 1px solid #fff;
 }
 .site-author-name {
   margin: 5px 0 0;
   text-align: center;
   color: #f5f5f5;
   font-weight: normal;
+  font-family: Verdana;
+  font-size: 16px;
 }
 .site-description {
   margin-top: 5px;
@@ -1680,7 +1684,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #55938f;
+  background: #e31fb6;
 }
 .links-of-blogroll {
   font-size: 13px;
