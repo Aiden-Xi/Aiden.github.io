@@ -61,7 +61,7 @@
   
     
     
-    <link href="//fonts.useso.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
@@ -97,7 +97,7 @@
 <meta property="og:site_name" content="Sheriff & Niu">
 <meta property="og:description" content="Swift必定是Apple开发的趋势，TIBOE编程语言社区公布了2016年7月最新一期的编程语言排行榜，Java凭借19.8%的占有率继续遥遥领先，C、C++排名第2、第3。苹果专用编程语言Objective-C下滑严重，从去年第6下滑到了15名。链接对于一个Apple开发者Swift是你必须要掌握的开发语言之一。然而Swift已经更新到3.0版本，相对来说已经趋于稳定。在学习过程中自己的一些记">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1690043-b5e7d66022015065.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2016-12-15T14:28:36.000Z">
+<meta property="og:updated_time" content="2016-12-15T16:27:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Swift 3.0 变化汇总系列总结-String">
 <meta name="twitter:description" content="Swift必定是Apple开发的趋势，TIBOE编程语言社区公布了2016年7月最新一期的编程语言排行榜，Java凭借19.8%的占有率继续遥遥领先，C、C++排名第2、第3。苹果专用编程语言Objective-C下滑严重，从去年第6下滑到了15名。链接对于一个Apple开发者Swift是你必须要掌握的开发语言之一。然而Swift已经更新到3.0版本，相对来说已经趋于稳定。在学习过程中自己的一些记">
@@ -404,7 +404,7 @@
       
 
       
-        <p><img src="http://upload-images.jianshu.io/upload_images/1690043-b5e7d66022015065.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"><br>Swift必定是Apple开发的趋势，TIBOE编程语言社区公布了2016年7月最新一期的编程语言排行榜，Java凭借19.8%的占有率继续遥遥领先，C、C++排名第2、第3。苹果专用编程语言Objective-C下滑严重，从去年第6下滑到了15名。<a href="http://digi.163.com/16/0712/06/BROKN0K600162DSP.html" target="_blank" rel="external">链接</a><br>对于一个Apple开发者Swift是你必须要掌握的开发语言之一。然而Swift已经更新到3.0版本，相对来说已经趋于稳定。在学习过程中自己的一些记录总结。</p>
+        <p><img src="http://upload-images.jianshu.io/upload_images/1690043-b5e7d66022015065.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"><br>Swift必定是Apple开发的趋势，TIBOE编程语言社区公布了2016年7月最新一期的编程语言排行榜，Java凭借19.8%的占有率继续遥遥领先，C、C++排名第2、第3。苹果专用编程语言Objective-C下滑严重，从去年第6下滑到了15名。<a href="http://digi.163.com/16/0712/06/BROKN0K600162DSP.html" target="_blank" rel="external">链接</a><br>对于一个Apple开发者Swift是你必须要掌握的开发语言之一。然而Swift已经更新到3.0版本，相对来说已经趋于稳定。在学习过程中自己的一些记录总结。<br><a id="more"></a></p>
 <h1 id="String类中的API变化"><a href="#String类中的API变化" class="headerlink" title="String类中的API变化"></a>String类中的API变化</h1><p>1.大小写转换由原来的属性更改为方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">var string = &quot;Hello, Swift&quot;</div><div class="line">//全部转换为大写</div><div class="line">//swift2.2</div><div class="line">//string = string.uppercaseString</div><div class="line">//swift3.0</div><div class="line">string = string.uppercased()</div><div class="line">//全部转换为小写</div><div class="line">//swift2.2</div><div class="line">//string = string.lowercaseString</div><div class="line">//swift3.0</div><div class="line">string = string.lowercased()</div></pre></td></tr></table></figure></p>
 <p>2.String方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">var str = &quot;http://baidu.com&quot;</div><div class="line">str.capitalized  // 首字母大写</div><div class="line"></div><div class="line">/// 使用String的方法</div><div class="line">str.contains(&quot;o, swi&quot;) // 是否包含指定内容</div><div class="line">str.hasPrefix(&quot;Hell&quot;) // 是否以指定的字符串开头</div><div class="line">str.hasSuffix(&quot;ft&quot;)  // 是否以指定的字符串结尾</div><div class="line"></div><div class="line">/// 可以使用hasPrefix() 和 hasSuffix() 方法做简单的验证</div><div class="line">if (str.hasPrefix(&quot;http://&quot;) || str.hasPrefix(&quot;https://&quot;)) &amp;&amp; (str.hasSuffix(&quot;.com&quot;) || str.hasSuffix(&quot;.cn&quot;)) &#123;</div><div class="line">    print(&quot;这是一个网址&quot;)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>3.使用farmat定义一个字符串<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">let ss = String(format: &quot;Hello&quot;)</div></pre></td></tr></table></figure></p>
@@ -435,22 +435,17 @@
       
         
   <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <div>我只是玩下新功能，如果你觉得本文还不错的话可以赞赏一点~~</div>
     <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-      <span>赏</span>
+      <span>赞 赏</span>
     </button>
     <div id="QR" style="display: none;">
       
         <div id="wechat" style="display: inline-block">
-          <img id="wechat_qr" src="/path/to/wechat-reward-image" alt="Sheriff、 WeChat Pay"/>
-          <p>微信打赏</p>
+          <img id="wechat_qr" src="/images/wechat.png" alt="Sheriff、 WeChat Pay"/>
+          <p>微信赞赏</p>
         </div>
       
-      
-        <div id="alipay" style="display: inline-block">
-          <img id="alipay_qr" src="/path/to/alipay-reward-image" alt="Sheriff、 Alipay"/>
-          <p>支付宝打赏</p>
-        </div>
       
     </div>
   </div>
@@ -617,6 +612,15 @@
                 </a>
               </span>
             
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/3204034630" target="_blank" title="weibo">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  weibo
+                </a>
+              </span>
+            
           
         </div>
 
@@ -771,7 +775,7 @@
       ds.id = 'duoshuo-script';
       ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
       ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
+      (document.getElementById('footer')
       || document.getElementsByTagName('body')[0]).appendChild(ds);
     })();
   </script>

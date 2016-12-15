@@ -845,8 +845,7 @@ pre .javascript .function {
   transition-timing-function: ease-in-out;
   transition-delay: 0s;
 }
-.btn:hover,
-.post-more-link .btn:hover {
+.btn:hover {
   border-color: #222;
   color: #222;
   background: #fff;
@@ -1423,11 +1422,19 @@ pre .javascript .function {
   margin-top: 50px;
 }
 .post-more-link .btn {
-  color: #555;
+  background-color: #000;
+  border: none;
+  color: #fff;
+  padding: 1px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
   font-size: 14px;
-  background: transparent;
-  border-radius: 0;
-  line-height: 2;
+}
+.post-more-link .btn:hover {
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #000;
 }
 .posts-expand .post-tags {
   margin-top: 40px;
@@ -1799,7 +1806,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #448e11;
+  background: #8e4506;
 }
 .links-of-blogroll {
   font-size: 13px;
