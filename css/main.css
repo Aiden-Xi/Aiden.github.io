@@ -216,7 +216,7 @@ h6 {
   padding: 0;
   font-weight: bold;
   line-height: 1.5;
-  font-family: 'Roboto Slab', 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 h2,
 h3,
@@ -1423,7 +1423,7 @@ pre .javascript .function {
 }
 .post-more-link .btn {
   background-color: #000;
-  border: none;
+  border: 1px solid #000;
   color: #fff;
   padding: 1px 10px;
   text-align: center;
@@ -1806,7 +1806,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #8e4506;
+  background: #b1f912;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2620,7 +2620,7 @@ hr {
   display: block;
   overflow: hidden;
   margin: 0 auto;
-  width: 75%;
+  width: 85%;
 }
 @media (max-width: 767px) {
   .logo-line-before,
