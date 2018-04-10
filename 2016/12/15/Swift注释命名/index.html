@@ -1,326 +1,258 @@
 <!doctype html>
 
 
-
-  
-
-
 <html class="theme-next mist use-motion" lang="zh-Hans">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-  
-  
-  
-  
-
-  
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     
     
-  
-
-  
-
-  
-
-  
-
-  
-
-  
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
     
     
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="Swift," />
-
-
-
-
-
-
-
-
-  <link rel="icon" type="image/x-icon" href="<%-config.root%>favicon.ico" />
-
-
-
-
-
-
-<meta name="description" content="第一次写东西发布到网络上，还是有点小激动的。 不久之前加入了一个读书分享群。 里面很多人都说读了一定要总结出来，那样才能让自己学到的更多。于是乎，我有了写东西的冲动。 最近一直在学习Swift，现在就写写在Swift里面本人理解的注释风格。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Swift注释命名">
-<meta property="og:url" content="http://yoursite.com/2016/12/15/Swift注释命名/index.html">
-<meta property="og:site_name" content="Sheriff&Niu">
-<meta property="og:description" content="第一次写东西发布到网络上，还是有点小激动的。 不久之前加入了一个读书分享群。 里面很多人都说读了一定要总结出来，那样才能让自己学到的更多。于是乎，我有了写东西的冲动。 最近一直在学习Swift，现在就写写在Swift里面本人理解的注释风格。">
-<meta property="og:image" content="https://github.com/liuyubobobo/Swift-Comment-Documentation-Tutorial/blob/master/images/swift.png?raw=true">
-<meta property="og:updated_time" content="2017-02-24T14:45:56.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Swift注释命名">
-<meta name="twitter:description" content="第一次写东西发布到网络上，还是有点小激动的。 不久之前加入了一个读书分享群。 里面很多人都说读了一定要总结出来，那样才能让自己学到的更多。于是乎，我有了写东西的冲动。 最近一直在学习Swift，现在就写写在Swift里面本人理解的注释风格。">
-<meta name="twitter:image" content="https://github.com/liuyubobobo/Swift-Comment-Documentation-Tutorial/blob/master/images/swift.png?raw=true">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Mist',
-    sidebar: {"position":"left","display":"post"},
-    fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-
-  <link rel="canonical" href="http://yoursite.com/2016/12/15/Swift注释命名/"/>
-
-
-
-
-
-  <title> Swift注释命名 | Sheriff&Niu </title>
+    <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
+          rel="stylesheet" type="text/css">
+    
+    
+    <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css"/>
+    
+    <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css"/>
+    
+    
+    <meta name="keywords" content="Swift,"/>
+    
+    
+    <link rel="icon" type="image/x-icon" href="<%-config.root%>favicon.ico"/>
+    
+    
+    <meta name="description"
+          content="第一次写东西发布到网络上，还是有点小激动的。 不久之前加入了一个读书分享群。 里面很多人都说读了一定要总结出来，那样才能让自己学到的更多。于是乎，我有了写东西的冲动。 最近一直在学习Swift，现在就写写在Swift里面本人理解的注释风格。">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Swift注释命名">
+    <meta property="og:url" content="http://yoursite.com/2016/12/15/Swift注释命名/index.html">
+    <meta property="og:site_name" content="Sheriff&Niu">
+    <meta property="og:description"
+          content="第一次写东西发布到网络上，还是有点小激动的。 不久之前加入了一个读书分享群。 里面很多人都说读了一定要总结出来，那样才能让自己学到的更多。于是乎，我有了写东西的冲动。 最近一直在学习Swift，现在就写写在Swift里面本人理解的注释风格。">
+    <meta property="og:image"
+          content="https://github.com/liuyubobobo/Swift-Comment-Documentation-Tutorial/blob/master/images/swift.png?raw=true">
+    <meta property="og:updated_time" content="2017-02-24T14:45:56.000Z">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Swift注释命名">
+    <meta name="twitter:description"
+          content="第一次写东西发布到网络上，还是有点小激动的。 不久之前加入了一个读书分享群。 里面很多人都说读了一定要总结出来，那样才能让自己学到的更多。于是乎，我有了写东西的冲动。 最近一直在学习Swift，现在就写写在Swift里面本人理解的注释风格。">
+    <meta name="twitter:image"
+          content="https://github.com/liuyubobobo/Swift-Comment-Documentation-Tutorial/blob/master/images/swift.png?raw=true">
+    
+    
+    <script type="text/javascript" id="hexo.configurations">
+        var NexT = window.NexT || {};
+        var CONFIG = {
+            root: '/',
+            scheme: 'Mist',
+            sidebar: {"position": "left", "display": "post"},
+            fancybox: true,
+            motion: true,
+            duoshuo: {
+                userId: '0',
+                author: '博主'
+            },
+            algolia: {
+                applicationID: '',
+                apiKey: '',
+                indexName: '',
+                hits: {"per_page": 10},
+                labels: {
+                    "input_placeholder": "Search for Posts",
+                    "hits_empty": "We didn't find any results for the search: ${query}",
+                    "hits_stats": "${hits} results found in ${time} ms"
+                }
+            }
+        };
+    </script>
+    
+    
+    <link rel="canonical" href="http://yoursite.com/2016/12/15/Swift注释命名/"/>
+    
+    
+    <title> Swift注释命名 | Sheriff&Niu </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-  
-
-
-
-  <script type="text/javascript">
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?9be0367cd05f5cf051da8293d935a56b";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
-
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
-
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">Sheriff&Niu</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-  <p class="site-subtitle"></p>
-</div>
-
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
-</div>
-
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            Home
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            Categories
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            Tags
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            About
-          </a>
-        </li>
-      
-
-      
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="st-search-show-outputs">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            Search
-          </a>
-        </li>
-      
-    </ul>
-  
-
-  
-    <div class="site-search">
-      
-  <form class="site-search-form">
-  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
-</form>
 
 <script type="text/javascript">
-  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
-    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
-    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
-  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
-
-  _st('install', 'tVzgsaesFjcvbcrbLs2d','2.0.0');
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?9be0367cd05f5cf051da8293d935a56b";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
 </script>
 
 
-
-    </div>
-  
-</nav>
-
-
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-
-  <div id="posts" class="posts-expand">
+<div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
     
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+        <div class="header-inner">
+            <div class="site-meta ">
+                
+                
+                <div class="custom-logo-site-title">
+                    <a href="/" class="brand" rel="start">
+                        <span class="logo-line-before"><i></i></span>
+                        <span class="site-title">Sheriff&Niu</span>
+                        <span class="logo-line-after"><i></i></span>
+                    </a>
+                </div>
+                <p class="site-subtitle"></p>
+            </div>
+            
+            <div class="site-nav-toggle">
+                <button>
+                    <span class="btn-bar"></span>
+                    <span class="btn-bar"></span>
+                    <span class="btn-bar"></span>
+                </button>
+            </div>
+            
+            <nav class="site-nav">
+                
+                
+                <ul id="menu" class="menu">
+                    
+                    
+                    <li class="menu-item menu-item-home">
+                        <a href="/" rel="section">
+                            
+                            <i class="menu-item-icon fa fa-fw fa-home"></i> <br/>
+                            
+                            Home
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="menu-item menu-item-categories">
+                        <a href="/categories" rel="section">
+                            
+                            <i class="menu-item-icon fa fa-fw fa-th"></i> <br/>
+                            
+                            Categories
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="menu-item menu-item-tags">
+                        <a href="/tags" rel="section">
+                            
+                            <i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>
+                            
+                            Tags
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="menu-item menu-item-about">
+                        <a href="/about" rel="section">
+                            
+                            <i class="menu-item-icon fa fa-fw fa-user"></i> <br/>
+                            
+                            About
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="menu-item menu-item-search">
+                        
+                        <a href="javascript:;" class="st-search-show-outputs">
+                            
+                            
+                            <i class="menu-item-icon fa fa-search fa-fw"></i> <br/>
+                            
+                            Search
+                        </a>
+                    </li>
+                
+                </ul>
+                
+                
+                <div class="site-search">
+                    
+                    <form class="site-search-form">
+                        <input type="text" id="st-search-input" class="st-search-input st-default-search-input"/>
+                    </form>
+                    
+                    <script type="text/javascript">
+                        (function (w, d, t, u, n, s, e) {
+                            w['SwiftypeObject'] = n;
+                            w[n] = w[n] || function () {
+                                (w[n].q = w[n].q || []).push(arguments);
+                            };
+                            s = d.createElement(t);
+                            e = d.getElementsByTagName(t)[0];
+                            s.async = 1;
+                            s.src = u;
+                            e.parentNode.insertBefore(s, e);
+                        })(window, document, 'script', '//s.swiftypecdn.com/install/v2/st.js', '_st');
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/15/Swift注释命名/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                        _st('install', 'tVzgsaesFjcvbcrbLs2d', '2.0.0');
+                    </script>
+                
+                
+                </div>
+            
+            </nav>
+        
+        
+        </div>
+    </header>
+    
+    <main id="main" class="main">
+        <div class="main-inner">
+            <div class="content-wrap">
+                <div id="content" class="content">
+                    
+                    
+                    <div id="posts" class="posts-expand">
+                        
+                        
+                        <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+                            <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/15/Swift注释命名/">
+                            
+                            <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Sheriff、">
     <meta itemprop="description" content="">
     <meta itemprop="image" content="/images/avatar.png">
   </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+                            
+                            <span style="display:none" itemprop="publisher" itemscope
+                                  itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Sheriff&Niu">
     <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
       <img style="display:none;" itemprop="url image" alt="Sheriff&Niu" src="">
     </span>
   </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                Swift注释命名
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
+                            
+                            
+                            <header class="post-header">
+                                
+                                
+                                <h1 class="post-title" itemprop="name headline">
+                                    
+                                    
+                                    Swift注释命名
+                                
+                                
+                                </h1>
+                                
+                                
+                                <div class="post-meta">
           <span class="post-time">
             
               <span class="post-meta-item-icon">
@@ -336,9 +268,9 @@
 
             
           </span>
-
-          
-            <span class="post-category" >
+                                    
+                                    
+                                    <span class="post-category">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -355,258 +287,484 @@
                 
               
             </span>
-          
-
-          
-            
-              <span class="post-comments-count">
+                                    
+                                    
+                                    <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <a href="/2016/12/15/Swift注释命名/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/15/Swift注释命名/" itemprop="commentCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/15/Swift注释命名/"
+                        itemprop="commentCount"></span>
                 </a>
               </span>
+                                
+                                
+                                </div>
+                            </header>
+                            
+                            
+                            <div class="post-body" itemprop="articleBody">
+                                
+                                
+                                <p>第一次写东西发布到网络上，还是有点小激动的。 不久之前加入了一个读书分享群。 里面很多人都说读了一定要总结出来，那样才能让自己学到的更多。于是乎，我有了写东西的冲动。
+                                    最近一直在学习Swift，现在就写写在Swift里面本人理解的注释风格。</p>
+                                <a id="more"></a>
+                                <h1 id="注释："><a href="#注释：" class="headerlink" title="注释："></a>注释：</h1>
+                                <p>有一个众所周知的工具 （VVDocument）</p>
+                                <figure class="highlight plain">
+                                    <table>
+                                        <tr>
+                                            <td class="gutter">
+                                                <pre><div class="line">1</div><div class="line">2</div><div
+                                                        class="line">3</div><div class="line">4</div><div
+                                                        class="line">5</div><div class="line">6</div><div
+                                                        class="line">7</div><div class="line">8</div><div
+                                                        class="line">9</div><div class="line">10</div><div class="line">11</div></pre>
+                                            </td>
+                                            <td class="code">
+                                                <pre><div class="line">// 单行注释</div><div class="line"></div><div
+                                                        class="line">/// 单行注释（三个斜杆的单行注释可以生成注释文档， 如果在开发中建议使用）</div><div
+                                                        class="line"></div><div class="line">//!&lt; 单行注释 (一般在枚举类型里面在case后面使用)</div><div
+                                                        class="line"></div><div class="line">/*! 单行注释 */</div><div
+                                                        class="line"></div><div class="line">/* 多行注释 */</div><div
+                                                        class="line"></div><div class="line">/** 多行注释 */</div></pre>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </figure>
+                                <figure class="highlight plain">
+                                    <table>
+                                        <tr>
+                                            <td class="gutter">
+                                                <pre><div class="line">1</div><div class="line">2</div><div
+                                                        class="line">3</div><div class="line">4</div><div
+                                                        class="line">5</div></pre>
+                                            </td>
+                                            <td class="code">
+                                                <pre><div class="line">///单行注释--尾行注释一般在枚举中使用</div><div class="line">enum Test: Int &#123;   </div><div
+                                                        class="line">  web =1,//!&lt;   web类型    </div><div
+                                                        class="line">  shop =2,//!&lt;  商铺活动  </div><div class="line">&#125;;</div></pre>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </figure>
+                                <h2 id="文档注释"><a href="#文档注释" class="headerlink" title="文档注释"></a>文档注释</h2>
+                                <h3 id="在注释里面使用-包括好的文字会粗体显示"><a href="#在注释里面使用-包括好的文字会粗体显示" class="headerlink"
+                                                                title="在注释里面使用**包括好的文字会粗体显示"></a>在注释里面使用**包括好的文字会粗体显示
+                                </h3>
+                                <h3 id="Parameter-参数说明关键字"><a href="#Parameter-参数说明关键字" class="headerlink"
+                                                              title="Parameter 参数说明关键字"></a>Parameter 参数说明关键字</h3>
+                                <h3 id="Throws-抛出异常关键字"><a href="#Throws-抛出异常关键字" class="headerlink"
+                                                           title="Throws: 抛出异常关键字"></a>Throws: 抛出异常关键字</h3>
+                                <h3 id="Returns-返回对象"><a href="#Returns-返回对象" class="headerlink"
+                                                         title="Returns: 返回对象"></a>Returns: 返回对象</h3>
+                                <figure class="highlight plain">
+                                    <table>
+                                        <tr>
+                                            <td class="gutter">
+                                                <pre><div class="line">1</div><div class="line">2</div><div
+                                                        class="line">3</div><div class="line">4</div><div
+                                                        class="line">5</div><div class="line">6</div><div
+                                                        class="line">7</div><div class="line">8</div><div
+                                                        class="line">9</div><div class="line">10</div><div class="line">11</div><div
+                                                        class="line">12</div><div class="line">13</div><div
+                                                        class="line">14</div><div class="line">15</div><div
+                                                        class="line">16</div><div class="line">17</div><div
+                                                        class="line">18</div><div class="line">19</div></pre>
+                                            </td>
+                                            <td class="code">
+                                                <pre><div class="line">/// There are a few keywords Xcode can recognize automatically. The format is like **- &lt;Keyword&gt; -**:. The most common use one is **Parameter**, **Throws** and **Returns**.</div><div
+                                                        class="line">/// **参数第一种写法**：</div><div class="line">/// - Parameter item1: This is item1</div><div
+                                                        class="line">/// - Parameter item2: This is item2</div><div
+                                                        class="line">/// **参数第二种写法**</div><div class="line">/// - Parameters:</div><div
+                                                        class="line">///   - item1: This is item1</div><div
+                                                        class="line">///   - item2: This is item2</div><div
+                                                        class="line">/// - Throws: `MyError.BothNilError` if both item1 and item2 are nil.</div><div
+                                                        class="line">/// - Returns: the result string.</div><div
+                                                        class="line">func showKeywordsCommentsWithItem1(item1: AnyObject?, item2: AnyObject?) throws -&gt; String &#123;</div><div
+                                                        class="line">    </div><div class="line">    if item1 == nil &amp;&amp; item2 == nil&#123;</div><div
+                                                        class="line">        throw MyError.BothNilError</div><div
+                                                        class="line">    &#125;</div><div class="line">    </div><div
+                                                        class="line">    let text = &quot;There are a few keywords Xcode can recognize automatically.&quot;</div><div
+                                                        class="line">    return text</div><div class="line">&#125;</div></pre>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </figure>
+                                <figure class="highlight plain">
+                                    <table>
+                                        <tr>
+                                            <td class="gutter">
+                                                <pre><div class="line">1</div><div class="line">2</div><div
+                                                        class="line">3</div><div class="line">4</div><div
+                                                        class="line">5</div><div class="line">6</div><div
+                                                        class="line">7</div><div class="line">8</div><div
+                                                        class="line">9</div><div class="line">10</div><div class="line">11</div><div
+                                                        class="line">12</div><div class="line">13</div></pre>
+                                            </td>
+                                            <td class="code">
+                                                <pre><div class="line">/// Some meta information can be added into the comment documentation using **author**, **authors**, **copyright**, **date**, **since**, **version**</div><div
+                                                        class="line">///</div><div
+                                                        class="line">/// This is an example</div><div class="line">/// - Author: xixiaoyu</div><div
+                                                        class="line">/// - Authors: All the geeks in the world:)</div><div
+                                                        class="line">/// - Copyright: xixiaoyu@2016</div><div
+                                                        class="line">/// - Date: 2016-07-22</div><div class="line">/// - Since: iOS 6</div><div
+                                                        class="line">/// - Version: 1.0.0</div><div class="line">func test() -&gt; String&#123;</div><div
+                                                        class="line">    let haha = &quot;Hello Swift&quot;</div><div
+                                                        class="line">    return haha</div><div class="line">&#125;</div></pre>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </figure>
+                                <h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2>
+                                <p><strong>空格只是为了显示，在项目注释中不需要空格</strong><br>在注释中使用[] ()中括号里面是跳转名称，小括号里面是URL, 当我们点击xxx的时候
+                                    会在默认的浏览器中打开url所指定的网页。 例如：<br> Whelcome to <a href="http://imooc.com" target="_blank"
+                                                                                 rel="external">imooc</a>.</p>
+                                <p>在注释中添加显示图片! [] () 中括号里面是logo名称， 小括号里面是logo的URL。<br>例如：<br><img
+                                        src="https://github.com/liuyubobobo/Swift-Comment-Documentation-Tutorial/blob/master/images/swift.png?raw=true"
+                                        alt="Swift logo"></p>
+                                <h1 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h1>
+                                <h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2>
+                                <p>在开发的过程中遇到一个问题的时候，有可能我们需要放哪里过会再来处理，那我们可以使用关键字 TODO来进行标记</p>
+                                <h2 id="MARK"><a href="#MARK" class="headerlink" title="MARK"></a>MARK</h2>
+                                <p>在一个文件里面可以使用MARK来对不同的方法进行分类区分</p>
+                                <h2 id="FIXME"><a href="#FIXME" class="headerlink" title="FIXME"></a>FIXME</h2>
+                                <p>FIXME 标记</p>
+                                <h1 id="命名规则"><a href="#命名规则" class="headerlink" title="命名规则"></a>命名规则</h1>
+                                <h2 id="使用可读的驼峰命名法去给类-方法-变量-命名。-class-struct-protocol-enum-应使用大写，变量名使用小写。"><a
+                                        href="#使用可读的驼峰命名法去给类-方法-变量-命名。-class-struct-protocol-enum-应使用大写，变量名使用小写。"
+                                        class="headerlink"
+                                        title="使用可读的驼峰命名法去给类 方法 变量 命名。 class struct protocol enum 应使用大写，变量名使用小写。"></a>使用可读的驼峰命名法去给类
+                                    方法 变量 命名。 class struct protocol enum 应使用大写，变量名使用小写。</h2>
+                                <figure class="highlight plain">
+                                    <table>
+                                        <tr>
+                                            <td class="gutter">
+                                                <pre><div class="line">1</div><div class="line">2</div><div
+                                                        class="line">3</div><div class="line">4</div><div
+                                                        class="line">5</div><div class="line">6</div><div
+                                                        class="line">7</div><div class="line">8</div><div
+                                                        class="line">9</div><div class="line">10</div><div class="line">11</div><div
+                                                        class="line">12</div><div class="line">13</div><div
+                                                        class="line">14</div><div class="line">15</div><div
+                                                        class="line">16</div><div class="line">17</div><div
+                                                        class="line">18</div><div class="line">19</div><div
+                                                        class="line">20</div><div class="line">21</div><div
+                                                        class="line">22</div><div class="line">23</div><div
+                                                        class="line">24</div></pre>
+                                            </td>
+                                            <td class="code">
+                                                <pre><div class="line">/// 变量常量命名</div><div class="line">let testCount = 100</div><div
+                                                        class="line"></div><div class="line">/// 类命名</div><div
+                                                        class="line">class TestClass &#123;</div><div class="line">&#125;</div><div
+                                                        class="line"></div><div class="line">/// 结构体命名</div><div
+                                                        class="line">struct TestStruct &#123;</div><div class="line">&#125;</div><div
+                                                        class="line"></div><div class="line">/// 枚举命名 使用首字母小写的驼峰命名法给每个case命名</div><div
+                                                        class="line">enum TestEnum &#123;</div><div class="line">  case test1</div><div
+                                                        class="line">  case test2</div><div class="line">&#125;</div><div
+                                                        class="line">/// 协议命名遵循Apple&apos;s API DesignGuidelines使用名词来描述, 如 ing able ible,</div><div
+                                                        class="line">protocol Prizable&#123;</div><div class="line">    func isPrizable() -&gt; Bool</div><div
+                                                        class="line">&#125;</div><div class="line"></div><div
+                                                        class="line">protocol Moving &#123;</div><div class="line">  func isMoveing() -&gt; Bool</div><div
+                                                        class="line">&#125;</div></pre>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </figure>
+                                <h1 id="空格-空行"><a href="#空格-空行" class="headerlink" title="空格 空行"></a>空格 空行</h1>
+                                <ul>
+                                    <li>空格：</li>
+                                </ul>
+                                <ol>
+                                    <li>在运算符前后空格 let p = 3 + 4</li>
+                                    <li>逗号后面空格。</li>
+                                    <li>左大括号前空格 (右大括号另起一行)<br>func test(number: Int) {<br>}</li>
+                                    <li>定义常量、变量时冒号后面空格, 冒号前面顶着常量变量。 let test: Int = 2</li>
+                                    <li>必包的大括号里面包含的内容需要前后空格。<br>func ==(s1:Student,s2:Student) -&gt; Bool { return
+                                        s1.score == s2.score }
+                                    </li>
+                                </ol>
+                                <ul>
+                                    <li>空行：</li>
+                                </ul>
+                                <ol>
+                                    <li>在右大括号之后如果还有方法需要空行，如果没有则无需空行</li>
+                                    <li>代码块缩进原则
+                                        <figure class="highlight plain">
+                                            <table>
+                                                <tr>
+                                                    <td class="gutter">
+                                                        <pre><div class="line">1</div><div class="line">2</div><div
+                                                                class="line">3</div><div class="line">4</div><div
+                                                                class="line">5</div><div class="line">6</div><div
+                                                                class="line">7</div><div class="line">8</div><div
+                                                                class="line">9</div><div class="line">10</div><div
+                                                                class="line">11</div></pre>
+                                                    </td>
+                                                    <td class="code">
+                                                        <pre><div class="line">struct Student: CustomStringConvertible, Equatable, Comparable, Prizable &#123;</div><div
+                                                                class="line">    var name: String</div><div
+                                                                class="line">    var score: Int</div><div class="line">    var description: String&#123;</div><div
+                                                                class="line">        return name + &quot;Score: &quot; + String(score)</div><div
+                                                                class="line">    &#125;</div><div
+                                                                class="line">    </div><div class="line">    func isPrizable() -&gt; Bool &#123;</div><div
+                                                                class="line">        return score &gt;= 60</div><div
+                                                                class="line">    &#125;</div><div
+                                                                class="line">&#125;</div></pre>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </figure>
+                                    </li>
+                                </ol>
+                                <p>推荐<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div class="line">4</div><div
+                                                            class="line">5</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">if person.isHave &#123;</div><div
+                                                            class="line">  // Do</div><div class="line">&#125; else &#123;</div><div
+                                                            class="line">  // Do else</div><div
+                                                            class="line">&#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>不推荐<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div class="line">4</div><div
+                                                            class="line">5</div><div class="line">6</div><div
+                                                            class="line">7</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">if (user.isHappy ) 多余空格</div><div
+                                                            class="line">&#123;                  换行位置不对</div><div
+                                                            class="line">  // Do something</div><div
+                                                            class="line">&#125;</div><div class="line">else &#123;</div><div
+                                                            class="line">  // Do something else</div><div class="line">&#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <h1 id="类型定义-（转自：-）"><a href="#类型定义-（转自：-）" class="headerlink" title="类型定义 （转自： ）"></a>类型定义
+                                    （转自： ）</h1>
+                                <p>尽可能的使用swift自带类型，在必须的时候才做桥接 ，String-&gt; NSString , Set-&gt;NSSet</p>
+                                <p>能使用let尽量使用， 一般情况下不建议到处使用var</p>
+                                <p>不要定义常量变量使用关键字<br>尽量let foo = something 而非 var for = somthing</p>
+                                <p>let-有保障 并且它的值的永远不会改变，对同事也是个 清晰的标记，对于它的用法，之后的代码可以做个强而有力的推断。更容易明白代码的含义。否则的话一旦你用了
+                                    var，还要去考虑值会不会改变，这时候你就不得不人肉去检查。</p>
+                                <p>这样，无论何时你看到 var，就假设它会变，并找到原因。</p>
+                                <h1 id="类型推断"><a href="#类型推断" class="headerlink" title="类型推断"></a>类型推断</h1>
+                                <p>Swift是高安全性语言，能让系统推断的类型不要显示指明, 空的字典和空数组的类型 使用类型标记 加强语义<br>如：<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div class="line">4</div><div
+                                                            class="line">5</div><div class="line">6</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">/// 推荐</div><div class="line">let testString = &quot;Hello&quot;</div><div
+                                                            class="line">var names: [String] = []</div><div
+                                                            class="line">var lookup: [String: Int] = [:]</div><div
+                                                            class="line">/// 不推荐</div><div class="line">let testString: String = &quot;Hello&quot;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <h1 id="参考自"><a href="#参考自" class="headerlink" title="参考自"></a>参考自</h1>
+                                <p><a href="https://github.com/github/swift-style-guide" target="_blank" rel="external">GitHub</a><br><a
+                                        href="http://www.jianshu.com/p/q81RER/" target="_blank" rel="external">献给写作者的
+                                    Markdown 新手指南</a><br><a href="http://www.cocoachina.com/ios/20160715/17047.html"
+                                                            target="_blank" rel="external">Swift-Code-Style</a></p>
+                            
+                            
+                            </div>
+                            
+                            <div>
+                            
+                            
+                            </div>
+                            
+                            <div>
+                                
+                                
+                                <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+                                    <div>如果你觉得本文还不错的话可以赞赏一点~~</div>
+                                    <button id="rewardButton" disable="enable"
+                                            onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+                                        <span>赞 赏</span>
+                                    </button>
+                                    <div id="QR" style="display: none;">
+                                        
+                                        <div id="wechat" style="display: inline-block">
+                                            <img id="wechat_qr" src="/images/wechat.png" alt="Sheriff、 WeChat Pay"/>
+                                            <p>微信赞赏</p>
+                                        </div>
+                                    
+                                    
+                                    </div>
+                                </div>
+                            
+                            
+                            </div>
+                            
+                            
+                            <footer class="post-footer">
+                                
+                                <div class="post-tags">
+                                    
+                                    <a href="/tags/Swift/" rel="tag"># Swift</a>
+                                
+                                </div>
+                                
+                                
+                                <div class="post-nav">
+                                    <div class="post-nav-next post-nav-item">
+                                        
+                                        <a href="/2016/12/15/Swift-3-0-变化汇总系列总结-String/" rel="next"
+                                           title="Swift 3.0 变化汇总系列总结-String">
+                                            <i class="fa fa-chevron-left"></i> Swift 3.0 变化汇总系列总结-String
+                                        </a>
+                                    
+                                    </div>
+                                    
+                                    <span class="post-nav-divider"></span>
+                                    
+                                    <div class="post-nav-prev post-nav-item">
+                                        
+                                        <a href="/2017/01/01/ruby-学习之 Module的included方法/" rel="prev"
+                                           title="ruby 学习之Module的included()">
+                                            ruby 学习之Module的included() <i class="fa fa-chevron-right"></i>
+                                        </a>
+                                    
+                                    </div>
+                                </div>
+                            
+                            
+                            </footer>
+                        </article>
+                        
+                        
+                        <div class="post-spread">
+                            
+                            <div class="ds-share flat" data-thread-key="2016/12/15/Swift注释命名/"
+                                 data-title="Swift注释命名"
+                                 data-content=""
+                                 data-url="http://yoursite.com/2016/12/15/Swift注释命名/">
+                                <div class="ds-share-inline">
+                                    <ul class="ds-share-icons-16">
+                                        
+                                        <li data-toggle="ds-share-icons-more"><a class="ds-more"
+                                                                                 href="javascript:void(0);">分享到：</a>
+                                        </li>
+                                        <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a>
+                                        </li>
+                                        <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a>
+                                        </li>
+                                        <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a>
+                                        </li>
+                                        <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a>
+                                        </li>
+                                    
+                                    </ul>
+                                    <div class="ds-share-icons-more">
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        </div>
+                    </div>
+                
+                
+                </div>
+                
+                
+                <div class="comments" id="comments">
+                    
+                    <div class="ds-thread" data-thread-key="2016/12/15/Swift注释命名/"
+                         data-title="Swift注释命名" data-url="http://yoursite.com/2016/12/15/Swift注释命名/">
+                    </div>
+                
+                </div>
             
-          
-
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <p>第一次写东西发布到网络上，还是有点小激动的。 不久之前加入了一个读书分享群。 里面很多人都说读了一定要总结出来，那样才能让自己学到的更多。于是乎，我有了写东西的冲动。 最近一直在学习Swift，现在就写写在Swift里面本人理解的注释风格。</p>
-<a id="more"></a>
-<h1 id="注释："><a href="#注释：" class="headerlink" title="注释："></a>注释：</h1><p>有一个众所周知的工具 （VVDocument）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">// 单行注释</div><div class="line"></div><div class="line">/// 单行注释（三个斜杆的单行注释可以生成注释文档， 如果在开发中建议使用）</div><div class="line"></div><div class="line">//!&lt; 单行注释 (一般在枚举类型里面在case后面使用)</div><div class="line"></div><div class="line">/*! 单行注释 */</div><div class="line"></div><div class="line">/* 多行注释 */</div><div class="line"></div><div class="line">/** 多行注释 */</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">///单行注释--尾行注释一般在枚举中使用</div><div class="line">enum Test: Int &#123;   </div><div class="line">  web =1,//!&lt;   web类型    </div><div class="line">  shop =2,//!&lt;  商铺活动  </div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<h2 id="文档注释"><a href="#文档注释" class="headerlink" title="文档注释"></a>文档注释</h2><h3 id="在注释里面使用-包括好的文字会粗体显示"><a href="#在注释里面使用-包括好的文字会粗体显示" class="headerlink" title="在注释里面使用**包括好的文字会粗体显示"></a>在注释里面使用**包括好的文字会粗体显示</h3><h3 id="Parameter-参数说明关键字"><a href="#Parameter-参数说明关键字" class="headerlink" title="Parameter 参数说明关键字"></a>Parameter 参数说明关键字</h3><h3 id="Throws-抛出异常关键字"><a href="#Throws-抛出异常关键字" class="headerlink" title="Throws: 抛出异常关键字"></a>Throws: 抛出异常关键字</h3><h3 id="Returns-返回对象"><a href="#Returns-返回对象" class="headerlink" title="Returns: 返回对象"></a>Returns: 返回对象</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">/// There are a few keywords Xcode can recognize automatically. The format is like **- &lt;Keyword&gt; -**:. The most common use one is **Parameter**, **Throws** and **Returns**.</div><div class="line">/// **参数第一种写法**：</div><div class="line">/// - Parameter item1: This is item1</div><div class="line">/// - Parameter item2: This is item2</div><div class="line">/// **参数第二种写法**</div><div class="line">/// - Parameters:</div><div class="line">///   - item1: This is item1</div><div class="line">///   - item2: This is item2</div><div class="line">/// - Throws: `MyError.BothNilError` if both item1 and item2 are nil.</div><div class="line">/// - Returns: the result string.</div><div class="line">func showKeywordsCommentsWithItem1(item1: AnyObject?, item2: AnyObject?) throws -&gt; String &#123;</div><div class="line">    </div><div class="line">    if item1 == nil &amp;&amp; item2 == nil&#123;</div><div class="line">        throw MyError.BothNilError</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    let text = &quot;There are a few keywords Xcode can recognize automatically.&quot;</div><div class="line">    return text</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">/// Some meta information can be added into the comment documentation using **author**, **authors**, **copyright**, **date**, **since**, **version**</div><div class="line">///</div><div class="line">/// This is an example</div><div class="line">/// - Author: xixiaoyu</div><div class="line">/// - Authors: All the geeks in the world:)</div><div class="line">/// - Copyright: xixiaoyu@2016</div><div class="line">/// - Date: 2016-07-22</div><div class="line">/// - Since: iOS 6</div><div class="line">/// - Version: 1.0.0</div><div class="line">func test() -&gt; String&#123;</div><div class="line">    let haha = &quot;Hello Swift&quot;</div><div class="line">    return haha</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2><p><strong>空格只是为了显示，在项目注释中不需要空格</strong><br>在注释中使用[] ()中括号里面是跳转名称，小括号里面是URL,  当我们点击xxx的时候 会在默认的浏览器中打开url所指定的网页。 例如：<br> Whelcome to <a href="http://imooc.com" target="_blank" rel="external">imooc</a>.</p>
-<p>在注释中添加显示图片! [] ()  中括号里面是logo名称， 小括号里面是logo的URL。<br>例如：<br><img src="https://github.com/liuyubobobo/Swift-Comment-Documentation-Tutorial/blob/master/images/swift.png?raw=true" alt="Swift logo"></p>
-<h1 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h1><h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><p>在开发的过程中遇到一个问题的时候，有可能我们需要放哪里过会再来处理，那我们可以使用关键字 TODO来进行标记</p>
-<h2 id="MARK"><a href="#MARK" class="headerlink" title="MARK"></a>MARK</h2><p>在一个文件里面可以使用MARK来对不同的方法进行分类区分</p>
-<h2 id="FIXME"><a href="#FIXME" class="headerlink" title="FIXME"></a>FIXME</h2><p>FIXME 标记</p>
-<h1 id="命名规则"><a href="#命名规则" class="headerlink" title="命名规则"></a>命名规则</h1><h2 id="使用可读的驼峰命名法去给类-方法-变量-命名。-class-struct-protocol-enum-应使用大写，变量名使用小写。"><a href="#使用可读的驼峰命名法去给类-方法-变量-命名。-class-struct-protocol-enum-应使用大写，变量名使用小写。" class="headerlink" title="使用可读的驼峰命名法去给类 方法 变量 命名。 class struct protocol enum 应使用大写，变量名使用小写。"></a>使用可读的驼峰命名法去给类 方法 变量 命名。 class struct protocol enum 应使用大写，变量名使用小写。</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">/// 变量常量命名</div><div class="line">let testCount = 100</div><div class="line"></div><div class="line">/// 类命名</div><div class="line">class TestClass &#123;</div><div class="line">&#125;</div><div class="line"></div><div class="line">/// 结构体命名</div><div class="line">struct TestStruct &#123;</div><div class="line">&#125;</div><div class="line"></div><div class="line">/// 枚举命名 使用首字母小写的驼峰命名法给每个case命名</div><div class="line">enum TestEnum &#123;</div><div class="line">  case test1</div><div class="line">  case test2</div><div class="line">&#125;</div><div class="line">/// 协议命名遵循Apple&apos;s API DesignGuidelines使用名词来描述, 如 ing able ible,</div><div class="line">protocol Prizable&#123;</div><div class="line">    func isPrizable() -&gt; Bool</div><div class="line">&#125;</div><div class="line"></div><div class="line">protocol Moving &#123;</div><div class="line">  func isMoveing() -&gt; Bool</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h1 id="空格-空行"><a href="#空格-空行" class="headerlink" title="空格 空行"></a>空格 空行</h1><ul>
-<li>空格：</li>
-</ul>
-<ol>
-<li>在运算符前后空格   let p = 3 + 4</li>
-<li>逗号后面空格。</li>
-<li>左大括号前空格  (右大括号另起一行)<br>func test(number: Int) {<br>}</li>
-<li>定义常量、变量时冒号后面空格, 冒号前面顶着常量变量。   let test: Int = 2</li>
-<li>必包的大括号里面包含的内容需要前后空格。<br>func ==(s1:Student,s2:Student) -&gt; Bool { return s1.score == s2.score }</li>
-</ol>
-<ul>
-<li>空行：</li>
-</ul>
-<ol>
-<li>在右大括号之后如果还有方法需要空行，如果没有则无需空行</li>
-<li>代码块缩进原则<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">struct Student: CustomStringConvertible, Equatable, Comparable, Prizable &#123;</div><div class="line">    var name: String</div><div class="line">    var score: Int</div><div class="line">    var description: String&#123;</div><div class="line">        return name + &quot;Score: &quot; + String(score)</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    func isPrizable() -&gt; Bool &#123;</div><div class="line">        return score &gt;= 60</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>推荐<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">if person.isHave &#123;</div><div class="line">  // Do</div><div class="line">&#125; else &#123;</div><div class="line">  // Do else</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>不推荐<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">if (user.isHappy ) 多余空格</div><div class="line">&#123;                  换行位置不对</div><div class="line">  // Do something</div><div class="line">&#125;</div><div class="line">else &#123;</div><div class="line">  // Do something else</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h1 id="类型定义-（转自：-）"><a href="#类型定义-（转自：-）" class="headerlink" title="类型定义 （转自： ）"></a>类型定义 （转自： ）</h1><p>尽可能的使用swift自带类型，在必须的时候才做桥接 ，String-&gt; NSString , Set-&gt;NSSet</p>
-<p>能使用let尽量使用， 一般情况下不建议到处使用var</p>
-<p>不要定义常量变量使用关键字<br>尽量let foo = something 而非 var  for = somthing</p>
-<p>let-有保障 并且它的值的永远不会改变，对同事也是个 清晰的标记，对于它的用法，之后的代码可以做个强而有力的推断。更容易明白代码的含义。否则的话一旦你用了 var，还要去考虑值会不会改变，这时候你就不得不人肉去检查。</p>
-<p>这样，无论何时你看到 var，就假设它会变，并找到原因。</p>
-<h1 id="类型推断"><a href="#类型推断" class="headerlink" title="类型推断"></a>类型推断</h1><p>Swift是高安全性语言，能让系统推断的类型不要显示指明, 空的字典和空数组的类型 使用类型标记 加强语义<br>如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">/// 推荐</div><div class="line">let testString = &quot;Hello&quot;</div><div class="line">var names: [String] = []</div><div class="line">var lookup: [String: Int] = [:]</div><div class="line">/// 不推荐</div><div class="line">let testString: String = &quot;Hello&quot;</div></pre></td></tr></table></figure></p>
-<h1 id="参考自"><a href="#参考自" class="headerlink" title="参考自"></a>参考自</h1><p><a href="https://github.com/github/swift-style-guide" target="_blank" rel="external">GitHub</a><br><a href="http://www.jianshu.com/p/q81RER/" target="_blank" rel="external">献给写作者的 Markdown 新手指南</a><br><a href="http://www.cocoachina.com/ios/20160715/17047.html" target="_blank" rel="external">Swift-Code-Style</a></p>
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <div>
-      
-        
-  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-    <div>如果你觉得本文还不错的话可以赞赏一点~~</div>
-    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-      <span>赞 赏</span>
-    </button>
-    <div id="QR" style="display: none;">
-      
-        <div id="wechat" style="display: inline-block">
-          <img id="wechat_qr" src="/images/wechat.png" alt="Sheriff、 WeChat Pay"/>
-          <p>微信赞赏</p>
-        </div>
-      
-      
-    </div>
-  </div>
-
-
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/Swift/" rel="tag"># Swift</a>
-          
-        </div>
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/12/15/Swift-3-0-变化汇总系列总结-String/" rel="next" title="Swift 3.0 变化汇总系列总结-String">
-                <i class="fa fa-chevron-left"></i> Swift 3.0 变化汇总系列总结-String
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/01/01/ruby-学习之 Module的included方法/" rel="prev" title="ruby 学习之Module的included()">
-                ruby 学习之Module的included() <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </article>
-
-
-
-    <div class="post-spread">
-      
-        <div class="ds-share flat" data-thread-key="2016/12/15/Swift注释命名/"
-     data-title="Swift注释命名"
-     data-content=""
-     data-url="http://yoursite.com/2016/12/15/Swift注释命名/">
-  <div class="ds-share-inline">
-    <ul  class="ds-share-icons-16">
-
-      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
-      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
-      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
-      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
-      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
-
-    </ul>
-    <div class="ds-share-icons-more">
-    </div>
-  </div>
-</div>
-      
-    </div>
-  </div>
-
-
-          </div>
-          
-
-
-          
-  <div class="comments" id="comments">
-    
-      <div class="ds-thread" data-thread-key="2016/12/15/Swift注释命名/"
-           data-title="Swift注释命名" data-url="http://yoursite.com/2016/12/15/Swift注释命名/">
-      </div>
-    
-  </div>
-
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
-
-      
-
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Directory
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            OverView
-          </li>
-        </ul>
-      
-
-      <section class="site-overview sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/avatar.png"
-               alt="Sheriff、" />
-          <p class="site-author-name" itemprop="name">Sheriff、</p>
-          <p class="site-description motion-element" itemprop="description">Better late than never.</p>
-        </div>
-        <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/">
-              <span class="site-state-item-count">8</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
-
-          
-            <div class="site-state-item site-state-categories">
-              <a href="/categories">
-                <span class="site-state-item-count">3</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
             </div>
-          
-
-          
-            <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">3</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
+            
+            
+            <div class="sidebar-toggle">
+                <div class="sidebar-toggle-line-wrap">
+                    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+                    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+                    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+                </div>
             </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
+            
+            <aside id="sidebar" class="sidebar">
+                <div class="sidebar-inner">
+                    
+                    
+                    <ul class="sidebar-nav motion-element">
+                        <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+                            Directory
+                        </li>
+                        <li class="sidebar-nav-overview" data-target="site-overview">
+                            OverView
+                        </li>
+                    </ul>
+                    
+                    
+                    <section class="site-overview sidebar-panel">
+                        <div class="site-author motion-element" itemprop="author" itemscope
+                             itemtype="http://schema.org/Person">
+                            <img class="site-author-image" itemprop="image"
+                                 src="/images/avatar.png"
+                                 alt="Sheriff、"/>
+                            <p class="site-author-name" itemprop="name">Sheriff、</p>
+                            <p class="site-description motion-element" itemprop="description">Better late than
+                                never.</p>
+                        </div>
+                        <nav class="site-state motion-element">
+                            <div class="site-state-item site-state-posts">
+                                <a href="/">
+                                    <span class="site-state-item-count">8</span>
+                                    <span class="site-state-item-name">日志</span>
+                                </a>
+                            </div>
+                            
+                            
+                            <div class="site-state-item site-state-categories">
+                                <a href="/categories">
+                                    <span class="site-state-item-count">3</span>
+                                    <span class="site-state-item-name">分类</span>
+                                </a>
+                            </div>
+                            
+                            
+                            <div class="site-state-item site-state-tags">
+                                <a href="/tags">
+                                    <span class="site-state-item-count">3</span>
+                                    <span class="site-state-item-name">标签</span>
+                                </a>
+                            </div>
+                        
+                        
+                        </nav>
+                        
+                        
+                        <div class="links-of-author motion-element">
           
             
               <span class="links-of-author-item">
@@ -617,8 +775,8 @@
                   github
                 </a>
               </span>
-            
-              <span class="links-of-author-item">
+                            
+                            <span class="links-of-author-item">
                 <a href="http://weibo.com/u/3204034630" target="_blank" title="weibo">
                   
                     <i class="fa fa-fw fa-globe"></i>
@@ -626,190 +784,187 @@
                   weibo
                 </a>
               </span>
-            
-          
+                        
+                        
+                        </div>
+                    
+                    
+                    </section>
+                    
+                    
+                    <!--noindex-->
+                    <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+                        <div class="post-toc">
+                            
+                            
+                            <div class="post-toc-content">
+                                <ol class="nav">
+                                    <li class="nav-item nav-level-1"><a class="nav-link" href="#注释："><span
+                                            class="nav-number">1.</span> <span class="nav-text">注释：</span></a>
+                                        <ol class="nav-child">
+                                            <li class="nav-item nav-level-2"><a class="nav-link" href="#文档注释"><span
+                                                    class="nav-number">1.1.</span> <span
+                                                    class="nav-text">文档注释</span></a>
+                                                <ol class="nav-child">
+                                                    <li class="nav-item nav-level-3"><a class="nav-link"
+                                                                                        href="#在注释里面使用-包括好的文字会粗体显示"><span
+                                                            class="nav-number">1.1.1.</span> <span class="nav-text">在注释里面使用**包括好的文字会粗体显示</span></a>
+                                                    </li>
+                                                    <li class="nav-item nav-level-3"><a class="nav-link"
+                                                                                        href="#Parameter-参数说明关键字"><span
+                                                            class="nav-number">1.1.2.</span> <span class="nav-text">Parameter 参数说明关键字</span></a>
+                                                    </li>
+                                                    <li class="nav-item nav-level-3"><a class="nav-link"
+                                                                                        href="#Throws-抛出异常关键字"><span
+                                                            class="nav-number">1.1.3.</span> <span class="nav-text">Throws: 抛出异常关键字</span></a>
+                                                    </li>
+                                                    <li class="nav-item nav-level-3"><a class="nav-link"
+                                                                                        href="#Returns-返回对象"><span
+                                                            class="nav-number">1.1.4.</span> <span class="nav-text">Returns: 返回对象</span></a>
+                                                    </li>
+                                                </ol>
+                                            </li>
+                                            <li class="nav-item nav-level-2"><a class="nav-link" href="#超链接"><span
+                                                    class="nav-number">1.2.</span> <span class="nav-text">超链接</span></a>
+                                            </li>
+                                        </ol>
+                                    </li>
+                                    <li class="nav-item nav-level-1"><a class="nav-link" href="#关键字"><span
+                                            class="nav-number">2.</span> <span class="nav-text">关键字</span></a>
+                                        <ol class="nav-child">
+                                            <li class="nav-item nav-level-2"><a class="nav-link" href="#TODO"><span
+                                                    class="nav-number">2.1.</span> <span
+                                                    class="nav-text">TODO</span></a></li>
+                                            <li class="nav-item nav-level-2"><a class="nav-link" href="#MARK"><span
+                                                    class="nav-number">2.2.</span> <span
+                                                    class="nav-text">MARK</span></a></li>
+                                            <li class="nav-item nav-level-2"><a class="nav-link" href="#FIXME"><span
+                                                    class="nav-number">2.3.</span> <span
+                                                    class="nav-text">FIXME</span></a></li>
+                                        </ol>
+                                    </li>
+                                    <li class="nav-item nav-level-1"><a class="nav-link" href="#命名规则"><span
+                                            class="nav-number">3.</span> <span class="nav-text">命名规则</span></a>
+                                        <ol class="nav-child">
+                                            <li class="nav-item nav-level-2"><a class="nav-link"
+                                                                                href="#使用可读的驼峰命名法去给类-方法-变量-命名。-class-struct-protocol-enum-应使用大写，变量名使用小写。"><span
+                                                    class="nav-number">3.1.</span> <span class="nav-text">使用可读的驼峰命名法去给类 方法 变量 命名。 class struct protocol enum 应使用大写，变量名使用小写。</span></a>
+                                            </li>
+                                        </ol>
+                                    </li>
+                                    <li class="nav-item nav-level-1"><a class="nav-link" href="#空格-空行"><span
+                                            class="nav-number">4.</span> <span class="nav-text">空格 空行</span></a></li>
+                                    <li class="nav-item nav-level-1"><a class="nav-link" href="#类型定义-（转自：-）"><span
+                                            class="nav-number">5.</span> <span class="nav-text">类型定义 （转自： ）</span></a>
+                                    </li>
+                                    <li class="nav-item nav-level-1"><a class="nav-link" href="#类型推断"><span
+                                            class="nav-number">6.</span> <span class="nav-text">类型推断</span></a></li>
+                                    <li class="nav-item nav-level-1"><a class="nav-link" href="#参考自"><span
+                                            class="nav-number">7.</span> <span class="nav-text">参考自</span></a></li>
+                                </ol>
+                            </div>
+                        
+                        
+                        </div>
+                    </section>
+                    <!--/noindex-->
+                
+                
+                </div>
+            </aside>
+        
+        
         </div>
-
-        
-        
-
-        
-        
-
-        
-
-
-      </section>
-
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#注释："><span class="nav-number">1.</span> <span class="nav-text">注释：</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#文档注释"><span class="nav-number">1.1.</span> <span class="nav-text">文档注释</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#在注释里面使用-包括好的文字会粗体显示"><span class="nav-number">1.1.1.</span> <span class="nav-text">在注释里面使用**包括好的文字会粗体显示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Parameter-参数说明关键字"><span class="nav-number">1.1.2.</span> <span class="nav-text">Parameter 参数说明关键字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Throws-抛出异常关键字"><span class="nav-number">1.1.3.</span> <span class="nav-text">Throws: 抛出异常关键字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Returns-返回对象"><span class="nav-number">1.1.4.</span> <span class="nav-text">Returns: 返回对象</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#超链接"><span class="nav-number">1.2.</span> <span class="nav-text">超链接</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关键字"><span class="nav-number">2.</span> <span class="nav-text">关键字</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#TODO"><span class="nav-number">2.1.</span> <span class="nav-text">TODO</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MARK"><span class="nav-number">2.2.</span> <span class="nav-text">MARK</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FIXME"><span class="nav-number">2.3.</span> <span class="nav-text">FIXME</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#命名规则"><span class="nav-number">3.</span> <span class="nav-text">命名规则</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用可读的驼峰命名法去给类-方法-变量-命名。-class-struct-protocol-enum-应使用大写，变量名使用小写。"><span class="nav-number">3.1.</span> <span class="nav-text">使用可读的驼峰命名法去给类 方法 变量 命名。 class struct protocol enum 应使用大写，变量名使用小写。</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#空格-空行"><span class="nav-number">4.</span> <span class="nav-text">空格 空行</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#类型定义-（转自：-）"><span class="nav-number">5.</span> <span class="nav-text">类型定义 （转自： ）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#类型推断"><span class="nav-number">6.</span> <span class="nav-text">类型推断</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考自"><span class="nav-number">7.</span> <span class="nav-text">参考自</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
     </main>
-
+    
     <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2017</span>
-  <span class="with-love">
+        <div class="footer-inner">
+            <div class="copyright">
+                
+                &copy;
+                <span itemprop="copyrightYear">2017</span>
+                <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Sheriff、</span>
-</div>
-
-
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
-
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
-  </a>
-</div>
-
-
+                <span class="author" itemprop="copyrightHolder">Sheriff、</span>
+            </div>
+            
+            
+            <div class="powered-by">
+                由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+            </div>
+            
+            <div class="theme-info">
+                主题 -
+                <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+                    NexT.Mist
+                </a>
+            </div>
         
-
         
-      </div>
+        </div>
     </footer>
-
+    
     <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
+        <i class="fa fa-arrow-up"></i>
     </div>
-  </div>
+</div>
 
-  
 
 <script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
+    if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+        window.Promise = null;
+    }
 </script>
 
 
+<script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
 
 
+<script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
 
+<script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
 
-
-  
-
+<script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
 
 
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
 
-  
+<script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
 
 
-
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
 
 
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
 
 
-
-  
-
-  
-    
-  
-
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"sheriff"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementById('footer')
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
+<script type="text/javascript">
+    var duoshuoQuery = {short_name: "sheriff"};
+    (function () {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';
+        ds.async = true;
+        ds.id = 'duoshuo-script';
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementById('footer')
+            || document.getElementsByTagName('body')[0]).appendChild(ds);
     })();
-  </script>
-
-  
-    
-    
-    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-    <script src="/js/src/hook-duoshuo.js"></script>
-  
+</script>
 
 
-
-
-
-
-
-
-  
-  
-
-  
-
-  
-
-  
-
-  
+<script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+<script src="/js/src/hook-duoshuo.js"></script>
 
 
 </body>
