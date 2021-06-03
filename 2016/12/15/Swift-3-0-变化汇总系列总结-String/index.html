@@ -6,36 +6,36 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-    
-    
+
+
     <meta http-equiv="Cache-Control" content="no-transform"/>
     <meta http-equiv="Cache-Control" content="no-siteapp"/>
-    
-    
+
+
     <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
-    
-    
+
+
     <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
           rel="stylesheet" type="text/css">
-    
-    
+
+
     <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css"/>
-    
+
     <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css"/>
-    
-    
+
+
     <meta name="keywords" content="Swift,iOS,"/>
-    
-    
+
+
     <link rel="icon" type="image/x-icon" href="<%-config.root%>favicon.ico"/>
-    
-    
+
+
     <meta name="description"
           content="Swift必定是Apple开发的趋势，TIBOE编程语言社区公布了2016年7月最新一期的编程语言排行榜，Java凭借19.8%的占有率继续遥遥领先，C、C++排名第2、第3。苹果专用编程语言Objective-C下滑严重，从去年第6下滑到了15名。链接对于一个Apple开发者Swift是你必须要掌握的开发语言之一。然而Swift已经更新到3.0版本，相对来说已经趋于稳定。在学习过程中自己的一些记">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Swift 3.0 变化汇总系列总结-String">
     <meta property="og:url" content="http://yoursite.com/2016/12/15/Swift-3-0-变化汇总系列总结-String/index.html">
-    <meta property="og:site_name" content="Sheriff&Niu">
+    <meta property="og:site_name" content="Aiden_Xi">
     <meta property="og:description"
           content="Swift必定是Apple开发的趋势，TIBOE编程语言社区公布了2016年7月最新一期的编程语言排行榜，Java凭借19.8%的占有率继续遥遥领先，C、C++排名第2、第3。苹果专用编程语言Objective-C下滑严重，从去年第6下滑到了15名。链接对于一个Apple开发者Swift是你必须要掌握的开发语言之一。然而Swift已经更新到3.0版本，相对来说已经趋于稳定。在学习过程中自己的一些记">
     <meta property="og:image"
@@ -47,8 +47,8 @@
           content="Swift必定是Apple开发的趋势，TIBOE编程语言社区公布了2016年7月最新一期的编程语言排行榜，Java凭借19.8%的占有率继续遥遥领先，C、C++排名第2、第3。苹果专用编程语言Objective-C下滑严重，从去年第6下滑到了15名。链接对于一个Apple开发者Swift是你必须要掌握的开发语言之一。然而Swift已经更新到3.0版本，相对来说已经趋于稳定。在学习过程中自己的一些记">
     <meta name="twitter:image"
           content="http://upload-images.jianshu.io/upload_images/1690043-b5e7d66022015065.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-    
-    
+
+
     <script type="text/javascript" id="hexo.configurations">
         var NexT = window.NexT || {};
         var CONFIG = {
@@ -74,12 +74,12 @@
             }
         };
     </script>
-    
-    
+
+
     <link rel="canonical" href="http://yoursite.com/2016/12/15/Swift-3-0-变化汇总系列总结-String/"/>
-    
-    
-    <title> Swift 3.0 变化汇总系列总结-String | Sheriff&Niu </title>
+
+
+    <title> Swift 3.0 变化汇总系列总结-String | Aiden_Xi </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -98,22 +98,22 @@
 
 <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
-    
+
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
         <div class="header-inner">
             <div class="site-meta ">
-                
-                
+
+
                 <div class="custom-logo-site-title">
                     <a href="/" class="brand" rel="start">
                         <span class="logo-line-before"><i></i></span>
-                        <span class="site-title">Sheriff&Niu</span>
+                        <span class="site-title">Aiden_Xi</span>
                         <span class="logo-line-after"><i></i></span>
                     </a>
                 </div>
                 <p class="site-subtitle"></p>
             </div>
-            
+
             <div class="site-nav-toggle">
                 <button>
                     <span class="btn-bar"></span>
@@ -121,73 +121,73 @@
                     <span class="btn-bar"></span>
                 </button>
             </div>
-            
+
             <nav class="site-nav">
-                
-                
+
+
                 <ul id="menu" class="menu">
-                    
-                    
+
+
                     <li class="menu-item menu-item-home">
                         <a href="/" rel="section">
-                            
+
                             <i class="menu-item-icon fa fa-fw fa-home"></i> <br/>
-                            
+
                             Home
                         </a>
                     </li>
-                    
-                    
+
+
                     <li class="menu-item menu-item-categories">
                         <a href="/categories" rel="section">
-                            
+
                             <i class="menu-item-icon fa fa-fw fa-th"></i> <br/>
-                            
+
                             Categories
                         </a>
                     </li>
-                    
-                    
+
+
                     <li class="menu-item menu-item-tags">
                         <a href="/tags" rel="section">
-                            
+
                             <i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>
-                            
+
                             Tags
                         </a>
                     </li>
-                    
-                    
+
+
                     <li class="menu-item menu-item-about">
                         <a href="/about" rel="section">
-                            
+
                             <i class="menu-item-icon fa fa-fw fa-user"></i> <br/>
-                            
+
                             About
                         </a>
                     </li>
-                    
-                    
+
+
                     <li class="menu-item menu-item-search">
-                        
+
                         <a href="javascript:;" class="st-search-show-outputs">
-                            
-                            
+
+
                             <i class="menu-item-icon fa fa-search fa-fw"></i> <br/>
-                            
+
                             Search
                         </a>
                     </li>
-                
+
                 </ul>
-                
-                
+
+
                 <div class="site-search">
-                    
+
                     <form class="site-search-form">
                         <input type="text" id="st-search-input" class="st-search-input st-default-search-input"/>
                     </form>
-                    
+
                     <script type="text/javascript">
                         (function (w, d, t, u, n, s, e) {
                             w['SwiftypeObject'] = n;
@@ -203,59 +203,59 @@
 
                         _st('install', 'tVzgsaesFjcvbcrbLs2d', '2.0.0');
                     </script>
-                
-                
+
+
                 </div>
-            
+
             </nav>
-        
-        
+
+
         </div>
     </header>
-    
+
     <main id="main" class="main">
         <div class="main-inner">
             <div class="content-wrap">
                 <div id="content" class="content">
-                    
-                    
+
+
                     <div id="posts" class="posts-expand">
-                        
-                        
+
+
                         <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
                             <link itemprop="mainEntityOfPage"
                                   href="http://yoursite.com/2016/12/15/Swift-3-0-变化汇总系列总结-String/">
-                            
+
                             <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Sheriff、">
+    <meta itemprop="name" content="Aiden、">
     <meta itemprop="description" content="">
     <meta itemprop="image" content="/images/avatar.png">
   </span>
-                            
+
                             <span style="display:none" itemprop="publisher" itemscope
                                   itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Sheriff&Niu">
+    <meta itemprop="name" content="Aiden_Xi">
     <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Sheriff&Niu" src="">
+      <img style="display:none;" itemprop="url image" alt="Aiden_Xi" src="">
     </span>
   </span>
-                            
-                            
+
+
                             <header class="post-header">
-                                
-                                
+
+
                                 <h1 class="post-title" itemprop="name headline">
-                                    
-                                    
+
+
                                     Swift 3.0 变化汇总系列总结-String
-                                
-                                
+
+
                                 </h1>
-                                
-                                
+
+
                                 <div class="post-meta">
           <span class="post-time">
-            
+
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
@@ -263,33 +263,33 @@
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-15T22:25:10+08:00">
                 2016-12-15
               </time>
-            
 
-            
 
-            
+
+
+
           </span>
-                                    
-                                    
+
+
                                     <span class="post-category">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
-              
+
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/Swift/" itemprop="url" rel="index">
                     <span itemprop="name">Swift</span>
                   </a>
                 </span>
 
-                
-                
-              
+
+
+
             </span>
-                                    
-                                    
+
+
                                     <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <a href="/2016/12/15/Swift-3-0-变化汇总系列总结-String/#comments" itemprop="discussionUrl">
@@ -297,15 +297,15 @@
                         data-thread-key="2016/12/15/Swift-3-0-变化汇总系列总结-String/" itemprop="commentCount"></span>
                 </a>
               </span>
-                                
-                                
+
+
                                 </div>
                             </header>
-                            
-                            
+
+
                             <div class="post-body" itemprop="articleBody">
-                                
-                                
+
+
                                 <p>
                                     <img src="http://upload-images.jianshu.io/upload_images/1690043-b5e7d66022015065.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"
                                          alt="Paste_Image.png"><br>Swift必定是Apple开发的趋势，TIBOE编程语言社区公布了2016年7月最新一期的编程语言排行榜，Java凭借19.8%的占有率继续遥遥领先，C、C++排名第2、第3。苹果专用编程语言Objective-C下滑严重，从去年第6下滑到了15名。<a
@@ -546,7 +546,7 @@
                                                 <td class="code">
                                                     <pre><div class="line">//swift2.2</div><div class="line">//string.replaceRange(string.startIndex...string.startIndex.advancedBy(4), with: &quot;Hi&quot;)</div><div
                                                             class="line">//swift3.0</div><div class="line">string.replaceSubrange(string.startIndex...string.index(string.startIndex, offsetBy: 4), with: &quot;Hi&quot;)</div><div
-                                                            class="line">string.replaceSubrange(string.startIndex..&lt;string.index(string.startIndex, offsetBy: 2), with: &quot;Sheriff&quot;)</div></pre>
+                                                            class="line">string.replaceSubrange(string.startIndex..&lt;string.index(string.startIndex, offsetBy: 2), with: &quot;Aiden&quot;)</div></pre>
                                                 </td>
                                             </tr>
                                         </table>
@@ -592,18 +592,18 @@
                                               rel="external">开源中国</a><br><a href="http://swiftdoc.org/v3.0/type/String"
                                                                             target="_blank" rel="external">Swift文档</a>
                                 </p>
-                            
-                            
+
+
                             </div>
-                            
+
                             <div>
-                            
-                            
+
+
                             </div>
-                            
+
                             <div>
-                                
-                                
+
+
                                 <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
                                     <div>如果你觉得本文还不错的话可以赞赏一点~~</div>
                                     <button id="rewardButton" disable="enable"
@@ -611,65 +611,65 @@
                                         <span>赞 赏</span>
                                     </button>
                                     <div id="QR" style="display: none;">
-                                        
+
                                         <div id="wechat" style="display: inline-block">
-                                            <img id="wechat_qr" src="/images/wechat.png" alt="Sheriff、 WeChat Pay"/>
+                                            <img id="wechat_qr" src="/images/wechat.png" alt="Aiden、 WeChat Pay"/>
                                             <p>微信赞赏</p>
                                         </div>
-                                    
-                                    
+
+
                                     </div>
                                 </div>
-                            
-                            
+
+
                             </div>
-                            
-                            
+
+
                             <footer class="post-footer">
-                                
+
                                 <div class="post-tags">
-                                    
+
                                     <a href="/tags/Swift/" rel="tag"># Swift</a>
-                                    
+
                                     <a href="/tags/iOS/" rel="tag"># iOS</a>
-                                
+
                                 </div>
-                                
-                                
+
+
                                 <div class="post-nav">
                                     <div class="post-nav-next post-nav-item">
-                                        
+
                                         <a href="/2016/06/11/ruby-self理解/" rel="next" title="ruby self理解">
                                             <i class="fa fa-chevron-left"></i> ruby self理解
                                         </a>
-                                    
+
                                     </div>
-                                    
+
                                     <span class="post-nav-divider"></span>
-                                    
+
                                     <div class="post-nav-prev post-nav-item">
-                                        
+
                                         <a href="/2016/12/15/Swift注释命名/" rel="prev" title="Swift注释命名">
                                             Swift注释命名 <i class="fa fa-chevron-right"></i>
                                         </a>
-                                    
+
                                     </div>
                                 </div>
-                            
-                            
+
+
                             </footer>
                         </article>
-                        
-                        
+
+
                         <div class="post-spread">
-                            
+
                             <div class="ds-share flat" data-thread-key="2016/12/15/Swift-3-0-变化汇总系列总结-String/"
                                  data-title="Swift 3.0 变化汇总系列总结-String"
                                  data-content=""
                                  data-url="http://yoursite.com/2016/12/15/Swift-3-0-变化汇总系列总结-String/">
                                 <div class="ds-share-inline">
                                     <ul class="ds-share-icons-16">
-                                        
+
                                         <li data-toggle="ds-share-icons-more"><a class="ds-more"
                                                                                  href="javascript:void(0);">分享到：</a>
                                         </li>
@@ -681,33 +681,33 @@
                                         </li>
                                         <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a>
                                         </li>
-                                    
+
                                     </ul>
                                     <div class="ds-share-icons-more">
                                     </div>
                                 </div>
                             </div>
-                        
+
                         </div>
                     </div>
-                
-                
+
+
                 </div>
-                
-                
+
+
                 <div class="comments" id="comments">
-                    
+
                     <div class="ds-thread" data-thread-key="2016/12/15/Swift-3-0-变化汇总系列总结-String/"
                          data-title="Swift 3.0 变化汇总系列总结-String"
                          data-url="http://yoursite.com/2016/12/15/Swift-3-0-变化汇总系列总结-String/">
                     </div>
-                
+
                 </div>
-            
-            
+
+
             </div>
-            
-            
+
+
             <div class="sidebar-toggle">
                 <div class="sidebar-toggle-line-wrap">
                     <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
@@ -715,11 +715,11 @@
                     <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
                 </div>
             </div>
-            
+
             <aside id="sidebar" class="sidebar">
                 <div class="sidebar-inner">
-                    
-                    
+
+
                     <ul class="sidebar-nav motion-element">
                         <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
                             Directory
@@ -728,15 +728,15 @@
                             OverView
                         </li>
                     </ul>
-                    
-                    
+
+
                     <section class="site-overview sidebar-panel">
                         <div class="site-author motion-element" itemprop="author" itemscope
                              itemtype="http://schema.org/Person">
                             <img class="site-author-image" itemprop="image"
                                  src="/images/avatar.png"
-                                 alt="Sheriff、"/>
-                            <p class="site-author-name" itemprop="name">Sheriff、</p>
+                                 alt="Aiden、"/>
+                            <p class="site-author-name" itemprop="name">Aiden、</p>
                             <p class="site-description motion-element" itemprop="description">Better late than
                                 never.</p>
                         </div>
@@ -747,60 +747,60 @@
                                     <span class="site-state-item-name">日志</span>
                                 </a>
                             </div>
-                            
-                            
+
+
                             <div class="site-state-item site-state-categories">
                                 <a href="/categories">
                                     <span class="site-state-item-count">3</span>
                                     <span class="site-state-item-name">分类</span>
                                 </a>
                             </div>
-                            
-                            
+
+
                             <div class="site-state-item site-state-tags">
                                 <a href="/tags">
                                     <span class="site-state-item-count">3</span>
                                     <span class="site-state-item-name">标签</span>
                                 </a>
                             </div>
-                        
-                        
+
+
                         </nav>
-                        
-                        
+
+
                         <div class="links-of-author motion-element">
-          
-            
+
+
               <span class="links-of-author-item">
                 <a href="https://github.com/xixiaoyu" target="_blank" title="github">
-                  
+
                     <i class="fa fa-fw fa-globe"></i>
-                  
+
                   github
                 </a>
               </span>
-                            
+
                             <span class="links-of-author-item">
                 <a href="http://weibo.com/u/3204034630" target="_blank" title="weibo">
-                  
+
                     <i class="fa fa-fw fa-globe"></i>
-                  
+
                   weibo
                 </a>
               </span>
-                        
-                        
+
+
                         </div>
-                    
-                    
+
+
                     </section>
-                    
-                    
+
+
                     <!--noindex-->
                     <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
                         <div class="post-toc">
-                            
-                            
+
+
                             <div class="post-toc-content">
                                 <ol class="nav">
                                     <li class="nav-item nav-level-1"><a class="nav-link" href="#String类中的API变化"><span
@@ -808,48 +808,48 @@
                                             class="nav-text">String类中的API变化</span></a></li>
                                 </ol>
                             </div>
-                        
-                        
+
+
                         </div>
                     </section>
                     <!--/noindex-->
-                
-                
+
+
                 </div>
             </aside>
-        
-        
+
+
         </div>
     </main>
-    
+
     <footer id="footer" class="footer">
         <div class="footer-inner">
             <div class="copyright">
-                
+
                 &copy;
                 <span itemprop="copyrightYear">2017</span>
                 <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-                <span class="author" itemprop="copyrightHolder">Sheriff、</span>
+                <span class="author" itemprop="copyrightHolder">Aiden、</span>
             </div>
-            
-            
+
+
             <div class="powered-by">
                 由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
             </div>
-            
+
             <div class="theme-info">
                 主题 -
                 <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
                     NexT.Mist
                 </a>
             </div>
-        
-        
+
+
         </div>
     </footer>
-    
+
     <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
     </div>
@@ -894,7 +894,7 @@
 
 
 <script type="text/javascript">
-    var duoshuoQuery = {short_name: "sheriff"};
+    var duoshuoQuery = {short_name: "Aiden"};
     (function () {
         var ds = document.createElement('script');
         ds.type = 'text/javascript';
